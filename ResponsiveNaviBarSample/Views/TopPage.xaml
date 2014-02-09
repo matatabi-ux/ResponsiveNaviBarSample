@@ -21,9 +21,10 @@
     </Page.Resources>
 
     <Page.TopAppBar>
-        <AppBar Height="180" VerticalAlignment="Top">
+        <AppBar VerticalAlignment="Top">
             <AppBar.Content>
-                <ctrl:ResponsiveDesignedFlipView IndicatorPlacement="Above"
+                <ctrl:ResponsiveDesignedFlipView VerticalAlignment="Top"
+                                                 IndicatorPlacement="Above"
                                                  ItemClick="OnItemClick"
                                                  ItemHeight="120"
                                                  ItemWidth="160"

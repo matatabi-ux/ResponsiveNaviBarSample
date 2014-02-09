@@ -497,6 +497,15 @@ namespace ResponsiveNaviBarSample.Controls
             }
             this.viewSource.Source = pages;
 
+            if (pages.Count > 1)
+            {
+                this.indicator.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                this.indicator.Visibility = Visibility.Collapsed;
+            }
+
             await Task.Delay(1);
 
             this.itemContainers = new List<ListViewBase>();
