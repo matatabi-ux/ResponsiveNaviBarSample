@@ -459,7 +459,7 @@ namespace ResponsiveNaviBarSample.Controls
         /// </summary>
         protected override void OnDisconnectVisualChildren()
         {
-            this.Loaded -= this.OnUnloaded;
+            this.Loaded -= this.OnLoaded;
             base.OnDisconnectVisualChildren();
         }
 
