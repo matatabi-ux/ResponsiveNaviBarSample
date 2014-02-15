@@ -25,6 +25,7 @@ namespace ResponsiveNaviBarSample.ViewModels
         string UniqueId { get; set; }
         string Title { get; set; }
         string ImageUri { get; set; }
+        string OwnerName { get; set; }
     }
 
     /// <summary>
@@ -149,6 +150,45 @@ namespace ResponsiveNaviBarSample.ViewModels
             }
         }
         #endregion //ImageUri:画像Uri プロパティ
+
+        #region OwnerName:作者名 プロパティ
+        /// <summary>
+        /// 作者名
+        /// </summary>
+        private string ownerName; 
+
+        /// <summary>
+        /// 作者名 の変更前の処理
+        /// </summary>
+        partial void OnOwnerNameChanging(string value);
+
+        /// <summary>
+        /// 作者名 の変更後の処理
+        /// </summary>
+        partial void OnOwnerNameChanged();
+
+        /// <summary>
+        /// 作者名 の取得および設定
+        /// </summary>
+        [DataMember]
+        public string OwnerName
+        {
+            get
+            {
+                return this.ownerName;
+            }
+
+            set
+            {
+                if (this.ownerName != value)
+                {
+                    this.OnOwnerNameChanging(value);
+                    this.SetProperty<string>(ref this.ownerName, value);
+                    this.OnOwnerNameChanged();
+                }
+            }
+        }
+        #endregion //OwnerName:作者名 プロパティ
 
     }
 

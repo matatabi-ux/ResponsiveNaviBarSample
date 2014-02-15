@@ -25,6 +25,7 @@ namespace ResponsiveNaviBarSample.Entities
     {
         string Title { get; set; }
         string ImageUri { get; set; }
+        string OwnerName { get; set; }
     }
 
     /// <summary>
@@ -66,6 +67,23 @@ namespace ResponsiveNaviBarSample.Entities
             set { this.imageUri = value; }
         }
         #endregion //ImageUri:画像Uri プロパティ
+
+        #region OwnerName:作者名 プロパティ
+        /// <summary>
+        /// 作者名
+        /// </summary>
+        private string ownerName; 
+
+        /// <summary>
+        /// 作者名 の取得および設定
+        /// </summary>
+        [XmlAttribute("owner")]
+        public string OwnerName
+        {
+            get { return this.ownerName; }
+            set { this.ownerName = value; }
+        }
+        #endregion //OwnerName:作者名 プロパティ
 
     }
 

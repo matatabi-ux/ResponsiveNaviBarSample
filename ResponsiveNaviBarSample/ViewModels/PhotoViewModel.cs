@@ -34,6 +34,7 @@ namespace ResponsiveNaviBarSample.ViewModels
                 UniqueId = Guid.NewGuid().ToString(),
                 Title = entity.Title,
                 ImageUri = entity.ImageUri,
+                OwnerName = entity.OwnerName,
             };
         }
     }

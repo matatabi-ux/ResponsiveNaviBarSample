@@ -83,9 +83,12 @@
                         <Border VerticalAlignment="Bottom"
                                 Background="#66000000"
                                 Padding="80,40">
-                            <TextBlock Style="{ThemeResource SubheaderTextBlockStyle}"
-                                       Text="{Binding Title}"
-                                       TextWrapping="Wrap" />
+                            <TextBlock Style="{ThemeResource SubheaderTextBlockStyle}" TextWrapping="Wrap">
+                                <Run Text="Photo: " />
+                                <Run Text="{Binding Title}" />
+                                <Run Text=" By " />
+                                <Run Text="{Binding OwnerName}" />
+                            </TextBlock>
                         </Border>
                     </Grid>
                 </DataTemplate>

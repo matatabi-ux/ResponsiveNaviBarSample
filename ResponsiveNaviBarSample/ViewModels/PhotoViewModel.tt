@@ -28,6 +28,7 @@ namespace ResponsiveNaviBarSample.ViewModels
        new Property("uniqueId", "string", "ID", "[DataMember]"),
        new Property("title", "string", "タイトル", "[DataMember]"),
        new Property("imageUri", "string", "画像Uri", "[DataMember]"),
+       new Property("ownerName", "string", "作者名", "[DataMember]"),
    }, "PhotoViewModel", "[DataContract]");
 #>
 <#@ include file="../Templates/ViewModel.ttinclude" #>

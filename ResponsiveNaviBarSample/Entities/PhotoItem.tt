@@ -28,6 +28,7 @@ namespace ResponsiveNaviBarSample.Entities
    Generate("PhotoItem", new Property[] {
        new Property("title", "string", "タイトル", "[XmlAttribute(\"title\")]"),
        new Property("imageUri", "string", "画像Uri", "[XmlAttribute(\"uri\")]"),
+       new Property("ownerName", "string", "作者名", "[XmlAttribute(\"owner\")]"),
    }, "PhotoItem", "[XmlRoot(\"photo\")]");
 #>
 <#@ include file="../Templates/Entity.ttinclude" #>
